@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.static("public"));
 
 let ducks = [
-    [{
+    {
     "_id":1,
     "name": "Batman_Duck",
     "type": "novelty",
@@ -218,12 +218,15 @@ let ducks = [
     "img": "zombie.jpg"
 }
 ]
-]
+app.get("/api/ducks/", (req, res)=>{
+    console.log("A get request was performed.")
+    res.send(ducks);
+});
 
 app.get("/api/ducks/:id", (req, res)=>{
-    console.log("A get request was performed.");
+    console.log("Another get request was performed.");
     const duck = ducks.find((duck=>duck._id === parseInt(req.params.id)));
-    res.send(ducks);
+    res.send(duck);
 });
 
 

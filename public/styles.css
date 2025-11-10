@@ -1,0 +1,44 @@
+:root {
+    --primary-color: #F28705;
+    --secondary-color: #F29F05;
+    --thirdary-color: #F2B705;
+    --fourthary-color: #260B01;
+    --fifthary-color: #401E01;
+    --sixthary-color: #D93D04;
+}
+
+body {
+    background: var(--primary-color);
+}
+
+#duck-json {
+    width: 95%;
+    margin: auto;
+    background: var(--secondary-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#duck-json2 {
+    background: var(--thirdary-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--fourthary-color);
+}
+h2 {
+    text-align: center;
+    color: var(--fifthary-color);
+}
+p {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    background: var(--primary-color);
+    color: var(--sixthary-color);
+    padding: 10px;
+}
