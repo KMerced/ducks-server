@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const multer = require("multer");
+const Joi = require("joi");
 app.use(express.json());
 app.use(cors());
 
@@ -218,6 +219,68 @@ let ducks = [
     "img": "zombie.jpg"
 }
 ]
+
+const storage = multer.diskStorage({
+    //Will add the image to the images folder directly, mostly for in the future when (hopefully) it will add ducks to the array or to a JSON or something
+    destination: (req, file, cb) => {
+      cb(null, "public/images/");
+    },
+    filename: (req, file, cb) => {
+      cb(null, file.originalname);
+    },
+
+  });
+  
+
+  const upload = multer({ storage: storage });
+
+  app.post("/api/ducks/", upload.single("img"), (req,res)=>{
+    console.log("Something has come in!");
+    const result = validateDuck(req.body);
+    
+    //Output for debugging to see exactly what's being sent. Was getting errors on the client.
+    console.log("Here's what came in: ")
+    console.log(req.body);
+
+    if(result.error){
+        console.log("Something has gone wrong with the thing coming in!");
+        res.status(400).send(result.error.details[0].message);
+        return;
+    }
+
+    //Give the incoming duck a new ID so that it actually adds to the array instead of doing some weird stuff.
+    const newId = ducks.length > 0 ? ducks[ducks.length - 1]._id + 1 : "";
+
+    const duck = {
+        _id: newId,
+        name:req.body.name,
+        type:req.body.type,
+        brand:req.body.brand,
+        line:req.body.line,
+        date:req.body.date,
+        story:req.body.story,
+        img: req.file ? `images/${req.file.filename}` : ""
+    };
+
+    ducks.push(duck);
+    res.status(200).send(duck);
+});
+
+
+const validateDuck = (duck) => {
+    const schema = Joi.object({
+        name:Joi.string().required().min(1),
+        type:Joi.string().required().min(1),
+        brand:Joi.string().required().min(1),
+        line:Joi.string().required().min(1),
+        date:Joi.string().required().min(10).max(10),
+        story:Joi.string().required().min(1)
+
+    });
+
+    return schema.validate(duck);
+};
+
 app.get("/api/ducks/", (req, res)=>{
     console.log("A get request was performed.")
     res.send(ducks);
