@@ -11,7 +11,7 @@ app.use(express.static("public"));
 let ducks = [
     {
     "_id":1,
-    "name": "Batman_Duck",
+    "name": "Batman Duck",
     "type": "novelty",
     "brand": "None",
     "line": "None",
@@ -23,8 +23,8 @@ let ducks = [
 
 {
     "_id":2,
-    "name": "Beige_Easter_Duck",
-    "type": "brand_name",
+    "name": "Beige Easter Duck",
+    "type": "brand name",
     "brand": "Infantino",
     "line": "???",
     "date": "??/??/????",
@@ -34,7 +34,7 @@ let ducks = [
 
 {
     "_id":3,
-    "name": "Blue_Duck",
+    "name": "Blue Duck",
     "type": "novelty",
     "brand": "None",
     "line": "None",
@@ -45,10 +45,10 @@ let ducks = [
 
 {
     "_id":4,
-    "name": "Butterfly_Duck",
-    "type": "brand_name",
-    "brand": "Bullseyes_Playground",
-    "line": "Spring_2025",
+    "name": "Butterfly Duck",
+    "type": "brand name",
+    "brand": "Bullseyes Playground",
+    "line": "Spring 2025",
     "date": "07/31/2025",
     "story": "N/A",
     "img": "images/butterfly.jpg"
@@ -56,7 +56,7 @@ let ducks = [
 
 {
     "_id":5,
-    "name": "Construction_Worker_Duck",
+    "name": "Construction Worker Duck",
     "type": "novelty",
     "brand": "None",
     "line": "None",
@@ -67,10 +67,10 @@ let ducks = [
 
 {
     "_id":6,
-    "name": "Fairy_Duck",
-    "type": "brand_name",
-    "brand": "Bullseyes_Playground",
-    "line": "Spring_2025",
+    "name": "Fairy Duck",
+    "type": "brand name",
+    "brand": "Bullseyes Playground",
+    "line": "Spring 2025",
     "date": "07/31/2025",
     "story": "N/A",
     "img": "images/fairy.jpg"
@@ -78,10 +78,10 @@ let ducks = [
 
 {
     "_id":7,
-    "name": "Firefly_Duck",
-    "type": "brand_name",
-    "brand": "Bullseyes_Playground",
-    "line": "Spring_2025",
+    "name": "Firefly Duck",
+    "type": "brand name",
+    "brand": "Bullseyes Playground",
+    "line": "Spring 2025",
     "date": "07/31/2025",
     "story": "N/A",
     "img": "images/firefly.jpg"
@@ -89,10 +89,10 @@ let ducks = [
 
 {
     "_id":8,
-    "name": "Football_Duck",
-    "type": "brand_name",
-    "brand": "Bullseyes_Playground",
-    "line": "Fall_2025",
+    "name": "Football Duck",
+    "type": "brand name",
+    "brand": "Bullseye's Playground",
+    "line": "Fall 2025",
     "date": "08/26/2025",
     "story": "I'm not entirely sure why there was a football duck in this year's lineup. I checked online for previous years and this is the only year where there was a football duck. My guess is that it has something to do with college football season starting in the fall. Regardless, I still like the duck!",
     "img": "images/football.jpg"
@@ -100,9 +100,9 @@ let ducks = [
 
 {
     "_id":9,
-    "name": "Frankies_Fun_Park_Green_Glitter_Duck",
+    "name": "Frankies Fun Park Green Glitter Duck",
     "type": "jumbo",
-    "brand": "Frankies_Fun_Park",
+    "brand": "Frankie's Fun Park",
     "line": "None",
     "date": "01/11/2024",
     "story": "This was a duck I won by getting enough tickets from Frankie's Fun Park on my 18th birthday. I remember blowing about $35 on playing the skee-ball game over and over just so I could get enough tickets to redeem the duck. Looking back, I definitely overspent, but I don't mind since I had fun the whole time!",
@@ -111,10 +111,10 @@ let ducks = [
 
 {
     "_id":10,
-    "name": "Mini_Dovakiin_Duck",
-    "type": "brand_name",
-    "brand": "Tubbz_Cosplaying_Ducks",
-    "line": "Skyrim_Series_Mini",
+    "name": "Mini Dovakiin Duck",
+    "type": "brand name",
+    "brand": "Tubbz Cosplaying Ducks",
+    "line": "Skyrim Series: Mini",
     "date": "06/09/2025",
     "story": "I ordered this duck together with the Yuji Itadori duck for my younger sister's birthday (my younger sister is really into Jujutsu Kaisen). Skyrim is my favorite videogame of all time, so when I heard this duck existed in their lineup, I knew I had to pick it up. Seeing this duck really brings back memories of playing Skyrim when I was in middle school. It reminds me of simpler times when you came home from school, rushed to finish your math homework, then turned on the Xbox 360 to start playing. The memories of walking around the roads of Whiterun hold and listening to 'From Past to Present' play in the background is an experience you don't get anywhere else. I still play the game today, ableit heavily modded to make up for the game's flaws. I plan to buy the bigger boxed edition of this duck in the future as well!",
     "img": "images/mini_dovakiin.jpg"
@@ -122,7 +122,7 @@ let ducks = [
 
 {
     "_id":11,
-    "name": "Munchkins_Bath_Duck",
+    "name": "Munchkins Bath Duck",
     "type": "misc",
     "brand": "Munchkins",
     "line": "None",
@@ -133,7 +133,7 @@ let ducks = [
 
 {
     "_id":12,
-    "name": "Outlaw_Duck",
+    "name": "Outlaw Duck",
     "type": "novelty",
     "brand": "None",
     "line": "None",
@@ -144,10 +144,10 @@ let ducks = [
 
 {
     "_id":13,
-    "name": "Pink_Glitter_Witch_Duck",
-    "type": "brand_name",
-    "brand": "Bullseyes_Playground",
-    "line": "Fall_2025",
+    "name": "Pink Glitter Witch Duck",
+    "type": "brand name",
+    "brand": "Bullseye's Playground",
+    "line": "Fall 2025",
     "date": "08/26/2025",
     "story": "N/A",
     "img": "images/pink_glitter_witch.jpg"
@@ -155,10 +155,10 @@ let ducks = [
 
 {
     "_id":14,
-    "name": "Pumpkin_Duck",
-    "type": "brand_name",
-    "brand": "Bullseyes_Playground",
-    "line": "Fall_2025",
+    "name": "Pumpkin Duck",
+    "type": "brand name",
+    "brand": "Bullseye's Playground",
+    "line": "Fall 2025",
     "date": "08/26/2025",
     "story": "This was the first of the Halloween ducks I got for 2025. I rushed to buy the whole set of ducks the moment I saw they were available on the Target website (as they tend to sell out within days at my local Target). I went as soon as I was done with all my classes and there were barely any left, likely bought up by scalpers. I was lucky that there were still enough to get the full set of 5. Had I come the next day, I'm confident the store would've sold out.",
     "img": "images/pumpkin.jpg"
@@ -166,8 +166,8 @@ let ducks = [
 
 {
     "_id":15,
-    "name": "Purple_With_Green_Bill_Duck",
-    "type": "brand_name",
+    "name": "Purple With Green Bill Duck",
+    "type": "brand name",
     "brand": "Infantino",
     "line": "None",
     "date": "??/??/????",
@@ -177,10 +177,10 @@ let ducks = [
 
 {
     "_id":16,
-    "name": "Scout_Duck",
-    "type": "brand_name",
-    "brand": "Bullseyes_Playground",
-    "line": "Spring_2025",
+    "name": "Scout Duck",
+    "type": "brand name",
+    "brand": "Bullseye's Playground",
+    "line": "Spring 2025",
     "date": "07/31/2025",
     "story": "This was one of many of the Bullseye's Playground ducks I would get my hands on. I first found out about these ducks from the r/rubberducks community on Reddit and the molds looked cool, so I decided I'd start collecting this brand. Since then, I've been collecting more of these ducks as Target releases them.",
     "img": "images/scout.jpg"
@@ -188,10 +188,10 @@ let ducks = [
 
 {
     "_id":17,
-    "name": "Skeleton_Duck",
-    "type": "brand_name",
-    "brand": "Bullseyes_Playground",
-    "line": "Fall_2025",
+    "name": "Skeleton Duck",
+    "type": "brand name",
+    "brand": "Bullseye's Playground",
+    "line": "Fall 2025",
     "date": "08/26/2025",
     "story": "N/A",
     "img": "images/skeleton.jpg"
@@ -199,7 +199,7 @@ let ducks = [
 
 {
     "_id":18,
-    "name": "Witch_Duck",
+    "name": "Witch Duck",
     "type": "novelty",
     "brand": "None",
     "line": "None",
@@ -210,10 +210,10 @@ let ducks = [
 
 {
     "_id":19,
-    "name": "Zombie_Duck",
-    "type": "brand_name",
-    "brand": "Bullseyes_Playground",
-    "line": "Fall_2025",
+    "name": "Zombie Duck",
+    "type": "brand name",
+    "brand": "Bullseye's Playground",
+    "line": "Fall 2025",
     "date": "08/26/2025",
     "story":"N/A",
     "img": "images/zombie.jpg"
