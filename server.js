@@ -266,6 +266,51 @@ const storage = multer.diskStorage({
     res.status(200).send(duck);
 });
 
+//Stuff for adding ducks
+app.put("/api/ducks/:id",upload.single("img"),(req,res) => {
+    const duck = ducks.find((d)=>d._id===parseInt(req.params.id));
+
+    if(!duck) {
+        res.status(404).send("I can't find that duck.");
+        return;
+    };
+
+    const isValidUpdate = validateDuck(req.body);
+    
+    if(isValidUpdate.error){
+        console.log("I can't find any information about this duck!");
+        res.status(400).send(isValidUpdate.error.details[0].message);
+        return;
+    };
+
+    duck.name = req.body.name;
+    duck.type = req.body.type;
+    duck.brand = req.body.brand;
+    duck.line = req.body.line;
+    duck.date = req.body.date;
+    duck.story = req.body.story;
+
+    if (req.file) {
+        duck.img = `images/${req.file.filename}`;
+    }
+
+    res.status(200).send(duck);
+});
+
+//Stuff for deleting ducks
+app.delete("/api/ducks/:id", (req,res)=>{
+    const duck = ducks.find((d)=>d._id===parseInt(req.params.id));
+    
+    if(!duck) {
+        res.status(404).send("I can't find the duck you want to delete, it seems...");
+        return;
+    }
+
+    const index = ducks.indexOf(duck);
+    ducks.splice(index, 1);
+    res.status(200).send(duck);
+});
+
 
 const validateDuck = (duck) => {
     const schema = Joi.object({
